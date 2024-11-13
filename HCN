@@ -1,0 +1,18 @@
+//HCN
+public class HCN {
+public static void main(String[] args) {
+float dai,rong, chuVi, dienTich;
+Random random = new Random();
+dai = random.nextFloat () + 10;
+rong = random.nextFloat () + 10;
+chuVi=(dai+rong)*2;
+dienTich=dai*rong;
+//in kết quả
+DecimalFormat d=new DecimalFormat(“###,###.0#”);
+System.out.printf("%15.1f%15.1f%15s%15s%n",
+dai,rong,d.format(tinhChuVi()),d.format(tinhDienTi
+ch());
+//in tiêu đề
+System.out.printf("%15s%15s%15s%15s%n",
+"Chiều dài ","Chiều rộng "," chu vi","Diện tich");
+} } 
