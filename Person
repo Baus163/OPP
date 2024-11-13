@@ -1,0 +1,58 @@
+package Person;
+
+public class Personm {
+	public static final String TEN = "No TEN";
+	public static final String DIACHI = "No DIACHI";
+	public static final String GIOITINH = "No GIOITINH";
+	
+	private String ten;
+    private String diaChi;
+    private String gioiTinh;
+
+	public Personm(String ten, String diaChi, String gioiTinh) {
+		super();
+		this.ten = ten;
+		this.diaChi = diaChi;
+		this.gioiTinh = gioiTinh;
+	}
+	
+	public Personm(Personm addr) {
+		this(addr.getTen(), addr.getDiaChi(), addr.getGioiTinh());
+	}
+
+	@Override
+	public String toString() {
+		return "Personm [ten=" + ten + ", diaChi=" + diaChi + ", gioiTinh=" + gioiTinh + "]";
+	}
+
+	public String getTen() {
+		return ten;
+	}
+
+	public String getDiaChi() {
+		return diaChi;
+	}
+
+	public String getGioiTinh() {
+		return gioiTinh;
+	}
+
+	public void setTen(String ten) {
+		this.ten = ten;
+	}
+
+	public void setDiaChi(String diaChi) {
+		this.diaChi = diaChi;
+	}
+
+	public void setGioiTinh(String gioiTinh) {
+		this.gioiTinh = gioiTinh;
+	}
+	
+	public static void main(String[] args) {
+		Personm addr = new Personm("Dat", "HANAM", "NAM");
+	    System.out.print(addr);	
+	}
+    
+    
+}
