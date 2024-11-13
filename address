@@ -1,0 +1,78 @@
+address
+package core;
+
+public class Address {
+    // Constant 
+    public static final String THON = "No THON";
+    public static final String XA = "No XA";
+    public static final String HUYEN = "No HUYEN";
+    public static final String TINH = "No TINH";
+
+    // Object
+    private String thon;
+    private String xa;
+    private String huyen;
+    private String tinh;
+
+    // Constructor mặc định, gọi constructor khác với các giá trị mặc định
+    public Address() {
+        this(THON, XA, HUYEN, TINH);
+    }
+
+    // Constructor với các tham số
+    public Address(String thon, String xa, String huyen, String tinh) {
+        this.thon = thon;
+        this.xa = xa;
+        this.huyen = huyen;
+        this.tinh = tinh;
+    }
+
+    // Getters
+    public String getThon() {
+        return thon;
+    }
+
+    public String getXa() {
+        return xa;
+    }
+
+    public String getHuyen() {
+        return huyen;
+    }
+
+    public String getTinh() {
+        return tinh;
+    }
+
+    // Setters
+    public void setThon(String thon) {
+        this.thon = thon;
+    }
+
+    public void setXa(String xa) {
+        this.xa = xa;
+    }
+
+    public void setHuyen(String huyen) {
+        this.huyen = huyen;
+    }
+
+    public void setTinh(String tinh) {
+        this.tinh = tinh;
+    }
+
+    // Override phương thức toString
+    @Override
+    public String toString() {
+        return "Address [thon=" + thon + ", xa=" + xa + ", huyen=" + huyen + ", tinh=" + tinh + "]";
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        // Tạo đối tượng Address với giá trị tùy chỉnh
+        Address addrs = new Address("4", "Ngọc Lũ", "Bình Lục", "Hà Nam");
+
+        // In ra đối tượng Address
+        System.out.print(addrs);
+    }
+}
